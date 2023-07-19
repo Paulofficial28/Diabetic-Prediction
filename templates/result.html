@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Diabetes Prediction Result</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        /* Result styles */
+        .result-container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .result-container h2 {
+            text-align: center;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        .btn-container a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+
+        .btn-container a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Diabetes Prediction Result</h2>
+        <div class="result">
+            {% if result == 1 %}
+                The model predicts that the person has diabetes.
+            {% else %}
+                The model predicts that the person does not have diabetes.
+            {% endif %}
+        </div>
+        <div class="btn-container">
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
